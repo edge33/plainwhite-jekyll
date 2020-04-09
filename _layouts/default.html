@@ -49,6 +49,13 @@
 
         <p>&copy;
           {{ "now" | date: "%Y" }}</p>
+          <div>
+            Dark Mode
+            <label class="switch"> 
+              <input type="checkbox">
+              <span class="slider round" onclick="toggleDarkMode()"></span>
+            </label>
+          </div>
       </section>
       <section class="content">
         {{ content }}
@@ -64,5 +71,6 @@
 		gtag('config', '{{ site.plainwhite.analytics_id }}');
 	</script>
     {%- endif -%}
+    <script type="text/javascript" src="/assets/js/toggle.js"></script>
   </body>
 </html>
