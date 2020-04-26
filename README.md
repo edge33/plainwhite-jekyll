@@ -1,4 +1,8 @@
-# plainwhite
+# dark-mode for plainwhite
+
+Dark mode implementation for plainwhite
+
+![plainwhite dark theme previe](/dark.png)
 
 Simplistic jekyll portfolio-style theme for writers.
 

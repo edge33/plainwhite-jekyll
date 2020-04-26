@@ -50,11 +50,12 @@
         <p>&copy;
           {{ "now" | date: "%Y" }}</p>
           <div>
-            Dark Mode
-            <label class="switch"> 
-              <input type="checkbox">
-              <span class="slider round" onclick="toggleDarkMode()"></span>
-            </label>
+            <p>Dark Mode
+              <label class="switch"> 
+                <input type="checkbox" id="dark-mode-toggle"> 
+                <span class="slider round" onclick="toggleDarkMode()"></span>
+              </label>
+            </p>
           </div>
       </section>
       <section class="content">

@@ -1,6 +1,40 @@
 .dark,
 .dark *{
-    background-color: #222;
+	$linkColor: #ffff66;
+	background-color: #121212;
     color: #e6e6e6;
-    border-color: #e6e6e6;
+	border-color: #e6e6e6;
+	
+	.icon-calendar:before { color: $dark_text_color } /* '' */
+	.icon-github-circled:before { color: $dark_text_color } /* '' */
+	.icon-twitter-squared:before { color: $dark_text_color } /* '' */
+	.icon-linkedin-squared:before { color: $dark_text_color } /* '' */
+
+	@import 'ext/solarized-dark';
+	.highlight, .highlight * 
+	{
+		
+		background-color: #002b36; color: #93a1a1 
+	}
+
+	div.highlight-dark {
+		padding: 5px 20px;
+	}
+	pre.highlight-dark, code {
+		font-family: 'Consolas', Menlo, monospace;
+		line-height: 1.4em;
+		tab-size: 4;
+	}
+
+	.post-categories {
+		li {
+			background-color: $dark_text_color;
+			color: #000000;
+		}
+	}
+
+	a {
+	color: $linkColor;
+	}
+
 }
