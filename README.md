@@ -114,6 +114,10 @@ plainwhite:
       url: "/resume"
 ```
 
+**Dark modes**
+
+Dark mode can be enabled by adding the 
+
 **Multiline tagline**
 
 Tagline can be multiline in this way
