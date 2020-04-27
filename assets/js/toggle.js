@@ -20,24 +20,17 @@ function setCookie(name, value, days) {
     d.setTime(d.getTime() + 24*60*60*1000*days);
     document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 }
+
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 
 document.addEventListener("DOMContentLoaded", function(){
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var theme = getCookie('theme');
-    var toggleInput = document.querySelector('#dark-mode-toggle');
-    if (theme === 'dark') {
+    console.log("cookie is " + theme);
+    if ( (theme === null && userPrefersDark) || theme === 'dark') {
+        var toggleInput = document.querySelector('#dark-mode-toggle');
         toggleInput.checked = true;
         toggleDarkMode();
-    }
+    } 
 });
-
-
-
-const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-
-if(userPrefersDark){
-    toggleDarkMode();
-}
